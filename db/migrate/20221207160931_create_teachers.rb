@@ -4,8 +4,6 @@ class CreateTeachers < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :subject
       t.string :image_url
-      t.integer :rating
-
       t.timestamps
     end
   end
