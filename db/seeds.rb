@@ -1,13 +1,27 @@
 puts "🌱 Seeding..."
 
-
-  10.times do
-   Teacher.create(
-      name: Faker::Name.name(),
-      phone_number: Faker::Number.number(digits: 10),
-      subject: :"Science"
-      img_url: Faker::Avatar.image
-    )
-  end
+   Teacher.create!([
+    {
+        name: 'Irene Gitau',
+        subject: 'Geography',
+        image_url: ''
+    },
+    {
+        name: 'Gina Muthoni',
+        subject: 'Sociology',
+        image_url: '' 
+    },
+    {
+        name: 'Chris Mwenda',
+        subject: 'Philosophy',
+        image_url: '' 
+    },
+    {
+        name: 'Jordan Peterson',
+        subject: 'Pyschology',
+        image_url: '' 
+    }
+    ]
+      )
 
   puts "✅ Done seeding!"
