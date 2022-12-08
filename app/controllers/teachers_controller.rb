@@ -101,7 +101,7 @@ class TeachersController < ApplicationController
   # PATCH/PUT /Teachers/1.json
   def update
     respond_to do |format|
-      if @teacher.update(Teacher_params)
+      if @teacher.update(teacher_params)
         format.html { redirect_to @teacher, notice: 'Teacher was successfully updated.' }
         format.json { render :show, status: :ok, location: @teacher }
       else
@@ -116,7 +116,7 @@ class TeachersController < ApplicationController
   def destroy
     @teacher.destroy
     respond_to do |format|
-      format.html { redirect_to Teachers_url, notice: 'Teacher was successfully destroyed.' }
+      format.html { redirect_to teachers_url, notice: 'Teacher was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -128,7 +128,7 @@ class TeachersController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def Teacher_params
+    def teacher_params
       params.require(:Teacher).permit(:title, :description, :Teacher_length, :director, :rating, :image)
     end
 end
