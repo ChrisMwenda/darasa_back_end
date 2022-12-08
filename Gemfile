@@ -1,6 +1,10 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
+gem 'therubyracer'
+gem 'devise'
+gem 'paperclip', '~> 4.2.0'
+gem 'bootstrap-sass', '~> 3.2.0.2'
+gem 'searchkick', '~> 0.8.3'
 ruby "3.0.2"
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
