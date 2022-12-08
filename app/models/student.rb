@@ -1,12 +1,11 @@
 class Student < ApplicationRecord
-    has_secure_password 
-    
+    devise :database_authenticatable, :registerable,
+    :recoverable, :rememberable, :trackable, :validatable
+
     has_many :reviews
     has_many :teachers, through: :reviews
 
-
-validates :username, uniqueness: true
-validates :username, presence: true, allow_nil: true 
+allow_nil: true 
 
 # def self.create_from_omniauth(auth)
 #     Student.find_or_create_by(uid: auth['uid'], provider: auth['provider']) do |u|
