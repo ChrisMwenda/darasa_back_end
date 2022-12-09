@@ -14,3 +14,5 @@ Review.create!(
     {teacher_name: "Beatrice Wambui",title: "Front-end design with React", image_url: "https://media.istockphoto.com/id/1287464946/vector/strong-black-woman-with-curly-hair-smiles-and-looks-directly-confident-young-woman-with.jpg?s=612x612&w=0&k=20&c=ZsblOZ1JE0ZAPS-LPZmlJbfyR5_2PZ6wx-7XH6SOr6I=",comment: "Bobo is a very thoughtful teacher who puts a lot of thought into how she presents the material.", user_id: user1.id }
     
     )
+
+    https://media.istockphoto.com/id/1287464946/vector/strong-black-woman-with-curly-hair-smiles-and-looks-directly-confident-young-woman-with.jpg?s=612x612&w=0&k=20&c=ZsblOZ1JE0ZAPS-LPZmlJbfyR5_2PZ6wx-7XH6SOr6I=

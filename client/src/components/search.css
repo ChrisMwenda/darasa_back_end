@@ -1,0 +1,18 @@
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 10px;
+  left: 18%;
+}
+
+.in {
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  input {
+    width: 300px;
+  }
+}

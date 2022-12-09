@@ -1,0 +1,60 @@
+.review {
+  background-color: #f6e58b;
+  height: 100vh;
+  background-image: url("../assets/s.jpg");
+  background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.review-card {
+  margin: auto;
+  background-color: #fdfeeae9;
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 2px 2px 12px rgba(128, 123, 123, 0.768);
+  justify-content: space-around;
+  padding: 30px;
+}
+.container {
+  padding: 10px;
+  border: 2px solid #b3ee20;
+  border-radius: 2pc;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-height: 70vh;
+  width: 65%;
+}
+.form {
+  min-height: 50vh;
+  min-width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: space-around;
+}
+input{
+  padding: 5px;
+}
+.info{
+  height: 10vh;
+}
+.submit{
+  background-color: #b3ee20;
+  padding: 5px;
+}
+@media screen and (max-width: 720px) {
+  .review-card,
+  .container,
+  .submit {
+    width: 100%;
+    font-size: 10px;
+  }
+}
