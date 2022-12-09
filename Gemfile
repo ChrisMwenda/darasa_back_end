@@ -1,12 +1,8 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-gem 'therubyracer'
-gem 'devise'
-gem 'paperclip', '~> 4.2.0'
-gem 'bootstrap-sass', '~> 3.2.0.2'
-gem 'searchkick', '~> 0.8.3'
+
 ruby "3.0.2"
-gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
@@ -26,7 +22,7 @@ gem "puma", "~> 5.0"
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-gem "bcrypt", "~> 3.1.7"
+# gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
