@@ -1,4 +1,6 @@
 Darasa Web App
+Darasa is a simple web app that solves this problem by allowing students to review their
+teachers and hold them accountable.
 
 This is a monolith app, intended to be a simple example of a CRUD app built with Ruby on Rails and React.js. It's an SQLITE3 database and a simple react frontend that can be used to interact with the database.
 This API uses:
@@ -9,6 +11,21 @@ run bundle install to install all dependencies then run bundle exec rails s to o
 Post man can be used to fetch data from the database or interact with the database from the frontend. 
 
 To install dependencies for the frontend, run npm install --prefix client from the project root and run npm start --prefix client on another terminal to open it on the browser.
+
+
+Minimum Viable Product
+The first version of the application must meet the following metrics:
+1. Students can log in to their portal
+2. Students can create (add) a new review
+3. Students can read (access) their lecturer/teacher reviews
+4. Students can update their reviews
+5. Students can delete (remove) their reviews
+
+Technologies
+1. React js front end
+2. Ruby on Rails back end
+3. SQLite database
+
 
 Tables in the database
 
@@ -22,4 +39,3 @@ Serialization
 For this app, active_model_serializers gem was used. gem "active_model_serializers" is inserted into the gemfile and run bundle install to install. Now we can use a generator to create a new serializer Serializers gives ability to create the exact structure for the data to expose as JSON from the api
 Endpoints
 
-GET /airlines - returns a list of all available airlines in the database GET /airlines/:id - return a airline matching the specified id GET /reviews - returns a list of all available reviews including user and airline in the database POST /reviews - creates a review and associtates with the specified user and airline in the database
