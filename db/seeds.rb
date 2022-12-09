@@ -1,5 +1,4 @@
 puts "🌱 Seeding..."
-
    Teacher.create!([
     {
         name: 'Irene Gitau',
