@@ -6,6 +6,7 @@
 background-repeat: no-repeat;
 background-size: cover;
 }
+
 .review-card {
   margin: auto;
   background-color: #fdfeeae9;
@@ -20,6 +21,7 @@ background-size: cover;
   justify-content: space-around;
   padding: 30px;
 }
+
 .container {
   padding: 10px;
   border: 2px solid #b3ee20;
@@ -32,6 +34,7 @@ background-size: cover;
   min-height: 70vh;
   width: 65%;
 }
+
 .form {
   min-height: 50vh;
   min-width: 70%;
@@ -43,7 +46,7 @@ background-size: cover;
 input{
   padding: 5px;
 }
-.info{
+.comment{
   height: 10vh;
 }
 .submit{

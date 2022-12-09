@@ -36,11 +36,7 @@ function Review() {
     });
   }
 
-  const handleClear = (event) => {
-    event.target.value = "";
-  };
-
-  return (
+   return (
     <>
       <div className="review">
         <NavBar />

@@ -13,7 +13,7 @@ function Signup({ onLogin, autologin }) {
     navigate("/");
   };
 
-  function handleSubmit(e) {
+  function submitFunc(e) {
     e.preventDefault();
     setErrors([]);
     fetch("/signup", {
@@ -30,16 +30,13 @@ function Signup({ onLogin, autologin }) {
       if (r.ok) {
         r.json().then((user) => onLogin(user));
         autologin();
-        navigate("/home");
+        navigate("/dashboard");
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
     });
   }
-  const handleClear = (event) => {
-    event.target.value = "" || setErrors([]);
-  };
-
+ 
   return (
     <>
       <div className="signup">
@@ -52,10 +49,9 @@ function Signup({ onLogin, autologin }) {
               <h3 style={{ color: "white" }}>Username</h3>
             </label>
             <input
-              onClick={handleClear}
               type="text"
               className="input"
-              placeholder="username"
+              placeholder="Your Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             ></input>
@@ -64,10 +60,9 @@ function Signup({ onLogin, autologin }) {
               <h3 style={{ color: "white" }}>Password</h3>
             </label>
             <input
-              onClick={handleClear}
               type="password"
               className="input"
-              placeholder="**********"
+              placeholder="Alphanumeric Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             ></input>
@@ -76,15 +71,14 @@ function Signup({ onLogin, autologin }) {
               <h3 style={{ color: "white" }}>Password confirmation</h3>
             </label>
             <input
-              onClick={handleClear}
               type="password"
               className="input"
-              placeholder="**********"
+              placeholder="Alphanumeric Password"
               value={passwordConfirmation}
               onChange={(e) => setPasswordConfirmation(e.target.value)}
             ></input>
 
-            <button onClick={handleSubmit} className="btn">
+            <button onClick={submitFunc} className="btn">
               SignUp
             </button>
             <button onClick={to_login} className="sgn">

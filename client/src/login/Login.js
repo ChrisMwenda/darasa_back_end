@@ -6,7 +6,7 @@ function Login({ onLogin, autologin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
-  function handleSubmit(e) {
+  function submitFunc(e) {
     e.preventDefault();
     fetch("/login", {
       method: "POST",
@@ -17,7 +17,7 @@ function Login({ onLogin, autologin }) {
     }).then((r) => {
       if (r.ok) {
         autologin();
-        to_home();
+        to_dashboard();
         r.json().then((user) => onLogin(user));
       } else {
         r.json().then((err) => setErrors(err.errors));
@@ -30,15 +30,11 @@ function Login({ onLogin, autologin }) {
   const to_signup = () => {
     navigate("/signup");
   };
-  const to_home = () => {
-    navigate("/home");
+  const to_dashboard = () => {
+    navigate("/dashboard");
   };
 
-  const handleClear = (event) => {
-    event.target.value = "";
-    setErrors([]);
-  };
-
+ 
   return (
     <>
       <div className="login">
@@ -52,7 +48,6 @@ function Login({ onLogin, autologin }) {
               <h3 style={{ color: "white" }}>Username</h3>
             </label>
             <input
-              onClick={handleClear}
               type="text"
               className="input"
               placeholder="username"
@@ -65,7 +60,6 @@ function Login({ onLogin, autologin }) {
             </label>
 
             <input
-              onClick={handleClear}
               type="password"
               className="input"
               placeholder="******"
@@ -73,7 +67,7 @@ function Login({ onLogin, autologin }) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             ></input>
-            <button className="btn" onClick={handleSubmit}>
+            <button className="btn" onClick={submitFunc}>
               Login
             </button>
             <button type="submit" onClick={to_signup} className="sgn">
